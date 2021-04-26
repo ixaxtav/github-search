@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       <NavbarGithub title="Ixax Github Search"/>
-      <div className="container">
+      <div className="container-fluid">
         <SearchBar/>
       </div>
     </div>
