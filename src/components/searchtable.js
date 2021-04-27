@@ -4,6 +4,7 @@ import Image from 'react-bootstrap/Image';
 
 export const SearchTable = (props) => {
     const data = props.data;
+    
     return (
         <div className="row justify-content-center mt-3">
             <div className="col">
@@ -23,7 +24,7 @@ export const SearchTable = (props) => {
                         <tbody>
                             {data.map(e => {
                                 return(
-                                    <tr>
+                                    <tr key={e.id}>
                                     <td style={{verticalAlign:"middle"}}><Image src={e.avatar_url} style={{height: '40px', width: '40px'}} roundedCircle /></td>
                                     <td style={{verticalAlign:"middle"}} ><a href={e.html_url} target="_blank" rel="noreferrer">{e.name || '-'}</a></td>
                                     <td style={{verticalAlign:"middle"}}>{e.bio || '-'}</td>
